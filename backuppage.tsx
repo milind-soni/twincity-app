@@ -3,7 +3,12 @@ import React, { useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const useTypewriter = (words, typingSpeed = 150, deletingSpeed = 100, pauseTime = 1000) => {
+type HexGridCoreProps = {
+  className?: string; // className is optional and should be a string
+  [key: string]: any; // Allow any other additional props
+};
+
+const useTypewriter = (words : string[], typingSpeed = 150, deletingSpeed = 100, pauseTime = 1000) => {
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -49,9 +54,9 @@ const useTypewriter = (words, typingSpeed = 150, deletingSpeed = 100, pauseTime 
   return text;
 };
 
-const HexGridCore = ({ className, ...rest }) => {
+const HexGridCore: React.FC<HexGridCoreProps> = ({ className, ...rest })=> {
   const [dimensions, setDimensions] = useState({ width: 1920, height: 1080 });
-  const [hoveredHex, setHoveredHex] = useState(null);
+  const [hoveredHex, setHoveredHex] = useState<[number, number] | null>(null);
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -89,9 +94,9 @@ const HexGridCore = ({ className, ...rest }) => {
   const cols = Math.ceil(dimensions.width / horizontalSpacing) + 1;
   const rows = Math.ceil(dimensions.height / verticalSpacing) + 1;
 
-  const isNeighbor = (i, j) => {
+  const isNeighbor = (i: number, j: number): boolean => {
     if (!hoveredHex) return false;
-    const [hi, hj] = hoveredHex;
+    const [hi, hj] = hoveredHex as [number, number];
     const oddRow = hi % 2 !== 0;
     const evenRow = !oddRow;
     return (
