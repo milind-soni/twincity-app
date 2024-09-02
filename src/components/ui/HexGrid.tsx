@@ -51,7 +51,7 @@ const HexGridCore = ({ className, ...rest }: { className?: string; [key: string]
   };
 
   const getColor = (i: number, j: number) => {
-    const baseColor: Color = { r: 30, g: 41, b: 59 }; // Slightly lighter than bg-slate-900
+    const baseColor: Color = { r: 10, g: 10, b: 10 }; // Slightly lighter than bg-slate-900
 
     if (!hoveredHex || !hoveredColor) return `rgb(${baseColor.r}, ${baseColor.g}, ${baseColor.b})`;
 
