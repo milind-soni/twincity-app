@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -41,16 +40,16 @@ const HexGridCore = ({ className, ...rest }: { className?: string; [key: string]
   const cols = Math.ceil(dimensions.width / horizontalSpacing) + 1;
   const rows = Math.ceil(dimensions.height / verticalSpacing) + 1;
 
-  const getDistance = (i1: number, j1: number, i2: number, j2: number) => {
+  const getDistance = useCallback((i1: number, j1: number, i2: number, j2: number) => {
     const x1 = j1 * horizontalSpacing + (i1 % 2 === 0 ? 0 : horizontalSpacing / 2);
     const y1 = i1 * verticalSpacing;
     const x2 = j2 * horizontalSpacing + (i2 % 2 === 0 ? 0 : horizontalSpacing / 2);
     const y2 = i2 * verticalSpacing;
     
     return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-  };
+  }, [horizontalSpacing, verticalSpacing]);
 
-  const getColor = (i: number, j: number) => {
+  const getColor = useCallback((i: number, j: number) => {
     const baseColor: Color = { r: 10, g: 10, b: 10 }; // Slightly lighter than bg-slate-900
 
     if (!hoveredHex || !hoveredColor) return `rgb(${baseColor.r}, ${baseColor.g}, ${baseColor.b})`;
@@ -70,7 +69,7 @@ const HexGridCore = ({ className, ...rest }: { className?: string; [key: string]
     const b = Math.round(baseColor.b + (hoveredColor.b - baseColor.b) * t);
 
     return `rgb(${r}, ${g}, ${b})`;
-  };
+  }, [hoveredHex, hoveredColor, getDistance, hexSize]);
 
   const handleHexHover = useCallback((i: number, j: number) => {
     setHoveredHex([i, j]);
@@ -80,7 +79,7 @@ const HexGridCore = ({ className, ...rest }: { className?: string; [key: string]
   return (
     <div
       className={cn(
-        "absolute inset-0 w-full h-full overflow-hidden bg-slate-900",
+        "w-full h-full overflow-hidden",
         className
       )}
       {...rest}
