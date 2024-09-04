@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 
-export const useTypewriter = (words: string[], typingSpeed = 150, deletingSpeed = 100, pauseTime = 1000) => {
+export const useTypewriter = (words: string[], typingSpeed = 500, deletingSpeed = 100, pauseTime = 750) => {
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -8,7 +8,7 @@ export const useTypewriter = (words: string[], typingSpeed = 150, deletingSpeed 
 
   const type = useCallback(() => {
     const currentWord = words[wordIndex];
-    
+
     if (isWaiting) {
       setIsWaiting(false);
       setIsDeleting(true);
@@ -20,13 +20,13 @@ export const useTypewriter = (words: string[], typingSpeed = 150, deletingSpeed 
       setTimeout(() => setIsWaiting(false), pauseTime);
       return;
     }
-    
+
     if (isDeleting && text === '') {
       setIsDeleting(false);
       setWordIndex((prev) => (prev + 1) % words.length);
       return;
     }
-    
+
     setText((prev) => {
       if (isDeleting) {
         return prev.slice(0, -1);
@@ -34,7 +34,6 @@ export const useTypewriter = (words: string[], typingSpeed = 150, deletingSpeed 
         return currentWord.slice(0, prev.length + 1);
       }
     });
-
   }, [words, wordIndex, isDeleting, text, isWaiting, pauseTime]);
 
   useEffect(() => {
