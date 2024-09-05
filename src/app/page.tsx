@@ -23,7 +23,7 @@ const Home = () => {
                 marketing strategies for maximum impact.
               </p>
             </div>
-            <div className="w-full max-w-4xl">
+            <div className="w-full max-w-4xl mb-8">
               <Image
                 src="/dashcens.png"
                 alt="Dashboard illustration"
@@ -43,7 +43,6 @@ const Home = () => {
                 className="rounded-lg shadow-lg"
               />
             </div>
-
           </div>
         </div>
       </section>
@@ -52,8 +51,30 @@ const Home = () => {
         <section className="min-h-screen bg-slate-800 flex items-center justify-center">
           <h2 className="text-3xl font-semibold text-white">Our Services</h2>
         </section>
-        <section className="min-h-screen bg-slate-900 flex items-center justify-center">
-          <h2 className="text-3xl font-semibold text-white">Contact Us</h2>
+        {/* Improved Contact Us Section */}
+        <section className="min-h-screen bg-slate-900 flex items-center justify-center px-4 py-16">
+          <div className="w-full max-w-md">
+            <h2 className="text-3xl font-semibold text-white text-center mb-8">Contact Us</h2>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300">Name</label>
+                <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md bg-gray-700 border-transparent focus:border-gray-500 focus:bg-gray-600 focus:ring-0 text-white" placeholder="Your Name" />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300">Email</label>
+                <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md bg-gray-700 border-transparent focus:border-gray-500 focus:bg-gray-600 focus:ring-0 text-white" placeholder="you@example.com" />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300">Message</label>
+                <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md bg-gray-700 border-transparent focus:border-gray-500 focus:bg-gray-600 focus:ring-0 text-white" placeholder="Your message here"></textarea>
+              </div>
+              <div>
+                <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </section>
       </main>
     </div>
