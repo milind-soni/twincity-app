@@ -4,6 +4,8 @@ import { BackgroundHexagons } from "@/components/ui/BackgroundHexagons";
 import Image from 'next/image';
 
 const Home = () => {
+  const calendlyUrl = "https://calendly.com/milindsoni201";
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -51,30 +53,35 @@ const Home = () => {
         <section className="min-h-screen bg-slate-800 flex items-center justify-center">
           <h2 className="text-3xl font-semibold text-white">Our Services</h2>
         </section>
-        {/* Improved Contact Us Section */}
-        <section className="min-h-screen bg-slate-900 flex items-center justify-center px-4 py-16">
-          <div className="w-full max-w-md">
-            <h2 className="text-3xl font-semibold text-white text-center mb-8">Contact Us</h2>
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300">Name</label>
-                <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md bg-gray-700 border-transparent focus:border-gray-500 focus:bg-gray-600 focus:ring-0 text-white" placeholder="Your Name" />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300">Email</label>
-                <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md bg-gray-700 border-transparent focus:border-gray-500 focus:bg-gray-600 focus:ring-0 text-white" placeholder="you@example.com" />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300">Message</label>
-                <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md bg-gray-700 border-transparent focus:border-gray-500 focus:bg-gray-600 focus:ring-0 text-white" placeholder="Your message here"></textarea>
-              </div>
-              <div>
-                <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
+        {/* Contact Us Section (now with Calendly link) */}
+        <section className="min-h-screen bg-slate-900 flex flex-col items-center justify-center px-4 py-16">
+          <h2 className="text-3xl font-semibold text-white text-center mb-8">Contact Us</h2>
+          <p className="text-gray-300 text-center max-w-2xl mb-8">
+            Have questions or ready to get started? Schedule a call with our team to discuss how we can help your business leverage demographic insights.
+          </p>
+          <a 
+            href={calendlyUrl}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Schedule a Call
+          </a>
+        </section>
+        {/* Book a Call Section */}
+        <section className="min-h-screen bg-slate-800 flex flex-col items-center justify-center px-4 py-16">
+          <h2 className="text-3xl font-semibold text-white text-center mb-8">Ready to Get Started?</h2>
+          <p className="text-gray-300 text-center max-w-2xl mb-8">
+            Book a call with our experts to discuss how our demographic analysis can benefit your business.
+          </p>
+          <a 
+            href={calendlyUrl}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Book a Call
+          </a>
         </section>
       </main>
     </div>
