@@ -50,14 +50,14 @@ const Home = () => {
       </section>
       {/* Additional scrollable sections */}
       <main>
-        <section className="min-h-screen bg-slate-800 flex items-center justify-center">
+        {/* <section className="min-h-screen bg-slate-800 flex items-center justify-center">
           <h2 className="text-3xl font-semibold text-white">Our Services</h2>
-        </section>
+        </section> */}
         {/* Contact Us Section (now with Calendly link) */}
         <section className="min-h-screen bg-slate-900 flex flex-col items-center justify-center px-4 py-16">
           <h2 className="text-3xl font-semibold text-white text-center mb-8">Contact Us</h2>
           <p className="text-gray-300 text-center max-w-2xl mb-8">
-            Have questions or ready to get started? Schedule a call with our team to discuss how we can help your business leverage demographic insights.
+            Have questions or ready to get started? Schedule a call with us to discuss how we can help your business leverage location intelligence.
           </p>
           <a 
             href={calendlyUrl}
@@ -69,20 +69,7 @@ const Home = () => {
           </a>
         </section>
         {/* Book a Call Section */}
-        <section className="min-h-screen bg-slate-800 flex flex-col items-center justify-center px-4 py-16">
-          <h2 className="text-3xl font-semibold text-white text-center mb-8">Ready to Get Started?</h2>
-          <p className="text-gray-300 text-center max-w-2xl mb-8">
-            Book a call with our experts to discuss how our demographic analysis can benefit your business.
-          </p>
-          <a 
-            href={calendlyUrl}
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105"
-          >
-            Book a Call
-          </a>
-        </section>
+    
       </main>
     </div>
   );
