@@ -26,7 +26,7 @@ const Home = () => {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <Image 
-                src="/hero.png" 
+                src="/census.png" 
                 alt="Demographic analysis illustration"
                 width={600}
                 height={400}
