@@ -14,25 +14,36 @@ const Home = () => {
       {/* Demographic Analysis Section */}
       <section className="min-h-screen bg-slate-900 py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="md:w-1/2 mb-8 md:mb-0">
-              <h2 className="text-3xl font-bold mb-4 text-white">Demographic Analysis</h2>
-              <p className="text-gray-300 mb-6">
+          <div className="flex flex-col items-center">
+            <div className="w-full mb-8">
+              <h2 className="text-3xl font-bold mb-4 text-white text-center">Demographic Analysis</h2>
+              <p className="text-gray-300 mb-6 text-center max-w-2xl mx-auto">
                 Explore demographics which can bring the best footfall to your business.
                 Our analysis helps you understand your target audience and optimize your
                 marketing strategies for maximum impact.
               </p>
-              {/* You can add a button here if needed in the future */}
             </div>
-            <div className="md:w-1/2 flex justify-center">
-              <Image 
-                src="/census.png" 
+            <div className="w-full max-w-4xl">
+              <Image
+                src="/dashcens.png"
+                alt="Dashboard illustration"
+                width={800}
+                height={400}
+                layout="responsive"
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="w-full max-w-4xl mb-8">
+              <Image
+                src="/census.png"
                 alt="Demographic analysis illustration"
                 width={600}
                 height={400}
                 layout="responsive"
+                className="rounded-lg shadow-lg"
               />
             </div>
+
           </div>
         </div>
       </section>
