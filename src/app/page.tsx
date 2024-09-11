@@ -4,7 +4,7 @@ import { BackgroundHexagons } from "@/components/ui/BackgroundHexagons";
 import Image from 'next/image';
 
 const Home = () => {
-  const calendlyUrl = "https://calendly.com/milindsoni201";
+  const calendlyUrl = "https://cal.com/milind-soni-002qed/30min";
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -21,8 +21,7 @@ const Home = () => {
               <h2 className="text-3xl font-bold mb-4 text-white text-center">Demographic Analysis</h2>
               <p className="text-gray-300 mb-6 text-center max-w-2xl mx-auto">
                 Explore demographics which can bring the best footfall to your business.
-                Our analysis helps you understand your target audience and optimize your
-                marketing strategies for maximum impact.
+                Our analysis helps you understand your target audience and Geo-Target your ads for better impact.
               </p>
             </div>
             <div className="w-full max-w-4xl mb-8">
@@ -48,6 +47,18 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="min-h-screen bg-slate-1000 py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center">
+            <div className="w-full mb-8">
+              <h2 className="text-3xl font-bold mb-4 text-white text-center">Enable your business with location intelligence for Quick Commerce</h2>
+              <p className="text-gray-300 mb-6 text-center max-w-2xl mx-auto">
+                Find out locations to setup touchpoints for your business to enable quick commerce, enabled by data driven decisions like demographic, traffic and population density
+              </p>
+            </div>
+            </div>
+            </div>
+            </section>
       {/* Additional scrollable sections */}
       <main>
         {/* <section className="min-h-screen bg-slate-800 flex items-center justify-center">
