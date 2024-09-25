@@ -56,9 +56,20 @@ const Home = () => {
                 Find out locations to setup touchpoints for your business to enable quick commerce, enabled by data driven decisions like demographic, traffic and population density
               </p>
             </div>
+            {/* Ensuring catchment.png is centered */}
+            <div className="w-full max-w-4xl mb-8 flex justify-center">
+              <Image
+                src="/catchment.png"
+                alt="Demographic analysis illustration"
+                width={600}
+                height={400}
+                layout="responsive"
+                className="rounded-lg shadow-lg"
+              />
             </div>
-            </div>
-            </section>
+          </div>
+        </div>
+      </section>
       {/* Additional scrollable sections */}
       <main>
         {/* <section className="min-h-screen bg-slate-800 flex items-center justify-center">
