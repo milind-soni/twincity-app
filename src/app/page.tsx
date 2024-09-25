@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Home = () => {
   const calendlyUrl = "https://cal.com/milind-soni-002qed/30min";
-
+  const linkedInUrl = 'https://www.linkedin.com/in/milind-soni-314075175/recent-activity/all/';
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
