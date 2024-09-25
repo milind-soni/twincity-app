@@ -17,11 +17,9 @@ const Navbar = async (props: Props) => {
       </aside>
       <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block">
         <ul className="flex items-center gap-6 list-none">
+
           <li>
-            <Link href="#" className="text-lg font-semibold hover:text-purple-400 transition-colors">Clients</Link>
-          </li>
-          <li>
-            <Link href="#" className="text-lg font-semibold hover:text-purple-400 transition-colors">Case Studies</Link>
+            <Link href="https://docs.fused.io/blog/rainfall-similarity-global/" className="text-lg font-semibold hover:text-purple-400 transition-colors">Case Studies</Link>
           </li>
         </ul>
       </nav>
