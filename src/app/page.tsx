@@ -14,14 +14,7 @@ const Home = () => {
       {/* Hero Section with HexGrid background */}
       <section className="relative min-h-screen pt-24 md:pt-32">
         <BackgroundHexagons className="absolute inset-0" />
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-6">
-            Location Intelligence for Your Business
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 text-center max-w-3xl mx-auto">
-            Empower your decisions with data-driven insights about locations and demographics.
-          </p>
-        </div>
+
       </section>
 
       {/* Demographic Analysis Section */}
